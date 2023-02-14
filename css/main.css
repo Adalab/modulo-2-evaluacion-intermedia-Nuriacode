@@ -3,4 +3,58 @@
     padding: 0;
     margin: 0;
     font-size: 62.5%;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    color: grey;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.title-1 {
+    font-size: 3rem;
+    padding-bottom: 1.5rem
+}
+
+.title-2{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.input {
+    width: 30%;
+    height: 3rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: lightgray;
+    color: black;
+}
+
+.button {
+    width: 20%;
+    background-color: rgb(34, 177, 177);
+    color: aliceblue;
+    height: 3rem;
+    padding-bottom: 6px;
+    font-size: 1.4rem;
+    border-radius: 10px;
+}
+
+.text-pista {
+    font-size: 1.5rem;
+    border: solid 2px grey;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.text-intentos {
+    font-size: 1.5rem;
+    border: solid 2px grey;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
 }
