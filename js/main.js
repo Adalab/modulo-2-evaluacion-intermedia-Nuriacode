@@ -3,7 +3,7 @@
 const newNumber = document.querySelector('.js_number');
 const btn = document.querySelector('.js_button');
 const pista = document.querySelector('.js_pista');
-const intentos = document.querySelector('.js_intentos');
+const attempt = document.querySelector('.js_intentos');
 
 
 //funcion sacar un número en la consola
@@ -34,22 +34,20 @@ function compareNumber() {
 }
 
 
+
 //función añadir intentos
-
-
+ let newAttempt = 0;
  function addAttempt(){
-    
+    newAttempt ++;
+    attempt.innerHTML = `Número de intentos: ${newAttempt}`;
  }
 
 
 //función manejadora
 function handleClickBtn (event) {
     event.preventDefault()
-    
     compareNumber ();
-
     addAttempt ();
-
 }
 
 
