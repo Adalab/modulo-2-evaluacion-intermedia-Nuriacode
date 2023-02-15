@@ -29,7 +29,7 @@ function compareNumber() {
         pista.innerHTML = "Número demasiado bajo, prueba otra vez";}
     else if (valueNewNunber > numRandom){
         pista.innerHTML = "Número demasiado alto, prueba otra vez";}
-    else ( valueNewNunber == numRandom) {
+    else (valueNewNunber === numRandom) {
     pista.innerHTML = "¡¡Has ganado campeona!!";}
 }
 
