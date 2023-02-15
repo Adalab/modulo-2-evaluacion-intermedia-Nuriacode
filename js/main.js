@@ -4,39 +4,47 @@ const newNumber = document.querySelector('.js_number');
 const btn = document.querySelector('.js_button');
 const pista = document.querySelector('.js_pista');
 const attempt = document.querySelector('.js_intentos');
-
+let newAttempt = 0;
 
 //funcion sacar un número en la consola
 
-function getRandomNumber () {
-    const num = Math.ceil(Math.random() * 100);
+function getRandomNumber (max) {
+    const num = Math.ceil(Math.random() * max);
     return num;
 };
 
-const numRandom = getRandomNumber();
+const numRandom = getRandomNumber(100);
 console.log(numRandom);
 
+//funcion mensaje
+
+const writeMens = (mens) => {
+    pista.innerHTML = mens;
+}
 
 
 //función compara número
 
 function compareNumber() {
-    const valueNewNunber = newNumber.value;
+    const valueNewNunber = parseInt(newNumber.value);
+    addAttempt (valueNewNunber);
 
-    if (valueNewNunber > 100) {
-            pista.innerHTML = "El número debe estar entre 1 y 100";}
+    if (isNaN(valueNewNunber)){
+        writeMens("Por favor, introduce un número");}
+    else if ( valueNewNunber < 1 ||valueNewNunber > 100){
+            writeMens( "El número debe estar entre 1 y 100");}
     else if (valueNewNunber < numRandom){
-        pista.innerHTML = "Número demasiado bajo, prueba otra vez";}
+        writeMens( "Número demasiado bajo, prueba otra vez");}
     else if (valueNewNunber > numRandom){
-        pista.innerHTML = "Número demasiado alto, prueba otra vez";}
-    else (valueNewNunber === numRandom) {
-    pista.innerHTML = "¡¡Has ganado campeona!!";}
+        writeMens( "Número demasiado alto, prueba otra vez");}
+    else if (valueNewNunber === numRandom) {writeMens( "¡¡Has ganado campeona!!");
+    }
+   
 }
 
 
 
 //función añadir intentos
- let newAttempt = 0;
  function addAttempt(){
     newAttempt ++;
     attempt.innerHTML = `Número de intentos: ${newAttempt}`;
@@ -47,7 +55,6 @@ function compareNumber() {
 function handleClickBtn (event) {
     event.preventDefault()
     compareNumber ();
-    addAttempt ();
 }
 
 
