@@ -27,7 +27,7 @@
 }
 
 .input {
-    width: 30%;
+    width: 15%;
     height: 3rem;
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -36,7 +36,11 @@
 }
 
 .button {
-    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
     background-color: rgb(34, 177, 177);
     color: aliceblue;
     height: 3rem;
@@ -46,6 +50,7 @@
 }
 
 .text-pista {
+    width: 50%;
     font-size: 1.5rem;
     border: solid 2px grey;
     margin-top: 1rem;
@@ -53,6 +58,7 @@
 }
 
 .text-intentos {
+    width: 50%;
     font-size: 1.5rem;
     border: solid 2px grey;
     margin-top: 1rem;
